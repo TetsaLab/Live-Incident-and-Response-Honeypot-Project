@@ -265,6 +265,7 @@ The goal was to ensure that detection capabilities were already operational befo
 
 A Microsoft Sentinel analytics rule was created to identify successful authentication to the exposed Windows system.
 
+
 ## Example KQL
 
 ```kql
@@ -293,7 +294,9 @@ This rule was designed to identify successful authentication to accounts that wo
 ![Sentinel Windows Logon Detection](images/windows-logon-detection.png)
 ```
 
-<!-- Add analytics rule screenshot -->
+
+<img width="946" height="398" alt="image" src="https://github.com/user-attachments/assets/d1d2435a-bfa8-430c-8d93-f1dd538a683b" />
+
 
 ---
 
