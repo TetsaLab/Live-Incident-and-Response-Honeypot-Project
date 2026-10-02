@@ -525,7 +525,8 @@ This provided visibility into SQL commands executed by unauthorized users.
 ![MySQL Attacker Queries](images/mysql-attacker-queries.png)
 ```
 
-<!-- Add screenshot showing attacker database queries -->
+<img width="680" height="301" alt="image" src="https://github.com/user-attachments/assets/13a90691-6826-4b49-8722-3fa6d52805ea" />
+
 
 ---
 
