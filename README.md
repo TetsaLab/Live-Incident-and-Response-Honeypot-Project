@@ -467,7 +467,9 @@ DeviceLogonEvents
 ![Security Alert](images/security-alert.png)
 ```
 
-<!-- Add Sentinel or Defender alert -->
+
+<img width="679" height="297" alt="image" src="https://github.com/user-attachments/assets/198ddbca-c365-4aef-8525-de54017ac419" />
+
 
 ---
 
