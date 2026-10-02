@@ -226,7 +226,8 @@ MySQLAudit_CL
 ![MySQL Log Ingestion](images/log-ingestion.png)
 ```
 
-<!-- Add screenshot showing MySQLAudit_CL logs -->
+<img width="877" height="353" alt="image" src="https://github.com/user-attachments/assets/1c14a279-8b4b-424f-8752-4bb522e3c1fd" />
+
 
 ---
 
