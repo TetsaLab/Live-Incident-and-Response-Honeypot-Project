@@ -582,7 +582,8 @@ The lab environment restricted outbound activity so that attempted attacker comm
 ![Network Investigation](images/network-investigation.png)
 ```
 
-<!-- Add screenshot -->
+
+<img width="680" height="290" alt="image" src="https://github.com/user-attachments/assets/1727c99a-4e11-49a3-a9c8-824def23d867" />
 
 ---
 
