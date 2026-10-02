@@ -114,12 +114,8 @@ Microsoft Sentinel was used for detection, alerting, threat hunting, and inciden
 
 ### Image Placeholder
 
-<!--
-Place your architecture screenshot or diagram here.
+<img width="464" height="310" alt="image" src="https://github.com/user-attachments/assets/26f870fb-a890-4d11-a9ce-319297e88ff5" />
 
-Recommended file:
-images/honeypot-architecture.png
--->
 
 ---
 
@@ -375,7 +371,9 @@ MySQLAudit_CL
 ![MySQL Authentication Detection](images/mysql-auth-detection.png)
 ```
 
-<!-- Add screenshot -->
+
+<img width="674" height="302" alt="image" src="https://github.com/user-attachments/assets/04435f34-6de7-4e11-8825-e5588f3a203c" />
+
 
 ---
 
