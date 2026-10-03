@@ -659,11 +659,8 @@ The two packages were compared to identify changes introduced during the comprom
 
 ## 📷 Pre-Breach vs Post-Breach Comparison
 
-```markdown
-![Forensic Comparison](images/forensic-comparison.png)
-```
+[DFIR Comparative Analysis](https://docs.google.com/document/d/1Bv684BmwiGMRnIj5lrVv0wV5Pr2c9isX/edit?usp=sharing&ouid=103047111509812865481&rtpof=true&sd=true)
 
-<!-- Add forensic comparison screenshot -->
 
 ---
 
