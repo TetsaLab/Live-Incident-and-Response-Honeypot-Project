@@ -691,51 +691,60 @@ The recovery plan included:
 
 # 📊 Key Findings
 
-> Replace the examples below with your final confirmed findings.
+## 1. Confirmed Unauthorized MySQL Root Access
 
-### Finding 1 — Internet Scanning Began After Exposure
+The investigation confirmed repeated remote authentication to the MySQL `root` account from external IP addresses.
 
-The honeypot began receiving unsolicited network and authentication activity after being exposed to the public internet.
+The first confirmed malicious activity was associated with `64.89.163.93`, which established multiple successful root sessions immediately before destructive database activity began.
 
----
+Additional successful MySQL root authentication was later observed from:
 
-### Finding 2 — Authentication Attempts Were Detected
+- `213.209.159.115`
+- `45.128.199.82`
 
-Multiple authentication attempts were observed against exposed services.
-
-The activity was analyzed using both Microsoft Defender and MySQL audit telemetry.
-
----
-
-### Finding 3 — Unauthorized Access Was Identified
-
-Successful unauthorized authentication was identified and correlated with additional activity inside the environment.
+This confirmed that the database was directly accessible from the public internet and that privileged credentials were successfully used by unauthorized external systems.
 
 ---
 
-### Finding 4 — Database Activity Was Reconstructed
+## 2. Database Enumeration and Data Access
 
-MySQL query logs provided visibility into commands executed after unauthorized database access.
+After gaining access to the MySQL server, the attacker began enumerating the database environment and accessing stored information.
 
----
+Observed activity included:
 
-### Finding 5 — Endpoint Activity Was Investigated
+- Database enumeration
+- Table enumeration
+- `SELECT` queries against database records
+- Inspection of database structure
+- Access to application data
 
-Defender telemetry was used to investigate:
+The successful execution of `SELECT` statements confirmed that the attacker obtained read-level access to database content.
 
-- Authentication
-- Process creation
-- File creation
-- Registry activity
-- Network connections
+### Confidentiality Impact
 
----
+**Potentially Impacted**
 
-### Finding 6 — Detection Rules Successfully Generated Visibility
-
-Microsoft Sentinel analytics rules created before exposure provided visibility into malicious authentication activity once the system was compromised.
+Although database records were accessed, the available evidence did not confirm that bulk data was successfully exfiltrated from the environment.
 
 ---
+
+## 3. Destructive SQL Activity
+
+The attacker executed multiple destructive SQL commands against the database environment.
+
+Confirmed activity included:
+
+```sql
+DROP TABLE credentials
+DROP TABLE customers
+DROP TABLE orders
+DROP TABLE payments
+
+DROP DATABASE lnp_corp
+DROP DATABASE sakila
+DROP DATABASE world
+```
+
 
 # 🧠 Skills Developed
 
@@ -814,57 +823,6 @@ This project strengthened my practical cybersecurity experience in the following
 
 ---
 
-# 📁 Repository Structure
-
-A clean repository structure can look like this:
-
-```text
-live-incident-response-honeypot/
-│
-├── README.md
-│
-├── images/
-│   ├── honeypot-architecture.png
-│   ├── azure-vm.png
-│   ├── mysql-database.png
-│   ├── log-ingestion.png
-│   ├── windows-logon-detection.png
-│   ├── mysql-auth-detection.png
-│   ├── honeypot-exposure.png
-│   ├── security-alert.png
-│   ├── mysql-attacker-queries.png
-│   ├── network-investigation.png
-│   ├── incident-timeline.png
-│   ├── device-isolation.png
-│   └── forensic-comparison.png
-│
-├── queries/
-│   ├── windows-logon-detection.kql
-│   ├── mysql-authentication.kql
-│   ├── mysql-query-analysis.kql
-│   ├── device-process-investigation.kql
-│   ├── network-analysis.kql
-│   └── threat-hunting.kql
-│
-├── reports/
-│   ├── incident-response-report.pdf
-│   ├── executive-summary.pdf
-│   └── forensic-analysis.pdf
-│
-├── logs/
-│   ├── README.md
-│   ├── mysql-auth-sample.csv
-│   ├── mysql-query-sample.csv
-│   ├── device-logon-sample.csv
-│   ├── device-process-sample.csv
-│   └── network-events-sample.csv
-│
-└── docs/
-    └── investigation-notes.md
-```
-
----
-
 # 📂 Project Artifacts
 
 ## Incident Response Report
@@ -931,49 +889,6 @@ network-events-sample.csv
 ```
 
 ---
-
-# ⚠️ Should I Upload All Raw Logs?
-
-I chose not to publish every raw log generated during the investigation.
-
-Instead, this repository contains selected and sanitized examples that demonstrate the evidence used during the investigation.
-
-Large raw datasets do not necessarily improve a cybersecurity portfolio and may expose unnecessary environment information.
-
-The complete logs can be retained privately for future analysis.
-
-## Recommended Public Artifacts
-
-Good items to publish:
-
-- Final incident response report
-- Executive summary
-- KQL queries
-- Architecture diagram
-- Selected screenshots
-- Sanitized CSV log samples
-- Forensic comparison summary
-- Incident timeline
-- Investigation notes
-
-## Keep Private or Redact
-
-Avoid publishing:
-
-- Passwords
-- API keys
-- Access tokens
-- Tenant IDs
-- Subscription IDs
-- Private IP information if sensitive
-- Personal information
-- Full Defender investigation packages
-- Unredacted forensic archives
-- Large raw datasets containing unnecessary environment details
-- Credentials used during the honeypot exercise
-
----
-
 # 📸 Additional Screenshots
 
 ## Microsoft Sentinel Incident
@@ -1174,7 +1089,7 @@ The techniques demonstrated in this repository are intended strictly for cyberse
 
 # 👤 Author
 
-**Your Name**
+**Sammy Tetzba**
 
 Cybersecurity | Security Operations | Incident Response | Threat Detection
 
