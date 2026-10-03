@@ -583,7 +583,8 @@ The lab environment restricted outbound activity so that attempted attacker comm
 ```
 
 
-<img width="680" height="290" alt="image" src="https://github.com/user-attachments/assets/1727c99a-4e11-49a3-a9c8-824def23d867" />
+<img width="658" height="288" alt="image" src="https://github.com/user-attachments/assets/66642730-cb9f-4fbe-af01-9bb24cc28da1" />
+
 
 ---
 
