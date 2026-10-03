@@ -1023,7 +1023,7 @@ Cybersecurity | Security Operations | Incident Response | Threat Detection
 `https://www.linkedin.com/in/YOUR-PROFILE`
 
 **GitHub:**  
-`https://github.com/YOUR-USERNAME`
+`https://github.com/TetsaLab`
 
 ---
 
