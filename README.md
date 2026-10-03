@@ -553,28 +553,25 @@ The lab environment restricted outbound activity so that attempted attacker comm
 
 # 🕒 Incident Timeline
 
-> Replace or expand the table below using the timeline from your final investigation report.
-
-| Time | Event | Source |
+| Time (UTC) | Event | Source |
 |---|---|---|
-| 2026-09-12 02:16 UTC | Honeypot exposed to the internet | Lab Notes |
-| TBD | Initial scanning / authentication activity observed | Defender |
-| TBD | Multiple failed authentication attempts observed | DeviceLogonEvents / MySQL |
-| TBD | Successful unauthorized authentication | Defender / MySQL |
-| TBD | Database enumeration begins | MySQLAudit_CL |
-| TBD | Suspicious SQL queries executed | MySQLAudit_CL |
-| TBD | Endpoint activity investigated | MDE |
-| TBD | File / process / registry activity analyzed | MDE |
-| TBD | Outbound network activity reviewed | NTANetAnalytics |
-| 2026-09-13 22:49 UTC | Compromised system isolated | Defender for Endpoint |
-
----
-
-# 📷 Incident Timeline Screenshot
-
-```markdown
-![Incident Timeline](images/incident-timeline.png)
-```
+| 2026-09-12 02:16 | Honeypot exposed to the public internet | Lab Notes |
+| 2026-09-12 02:35:57 | Pre-breach MDE investigation package collected to establish forensic baseline | MDE Investigation Package |
+| 2026-09-12 02:57:40 | Remote MySQL `root` authentication activity begins from `64.89.163.93`; failures and successful logons observed | MySQLAudit_CL |
+| 2026-09-12 ~02:58 | Database enumeration and data-access activity begins | MySQLAudit_CL |
+| 2026-09-12 02:58:03 | `credentials`, `customers`, `orders`, and `payments` tables dropped | MySQLAudit_CL |
+| 2026-09-12 02:58:04–02:58:05 | `RECOVER_YOUR_DATA` ransom/extortion records inserted | MySQLAudit_CL |
+| 2026-09-12 ~02:59–03:00 | Foreign-key removal and additional destructive table activity continues | MySQLAudit_CL |
+| 2026-09-12 03:00:05 | `sakila` and `lnp_corp` databases dropped | MySQLAudit_CL |
+| 2026-09-12 03:00:06 | `world` database dropped | MySQLAudit_CL |
+| 2026-09-12 16:03–16:14 | Repeated Windows Administrator network logon failures observed from `59.15.116.99` | DeviceLogonEvents |
+| 2026-09-12 16:17:19 | Windows `administrator` network logon succeeds from `59.15.116.99` | DeviceLogonEvents |
+| 2026-09-12 17:15:57–17:15:59 | `213.209.159.115` attempts MySQL `root`, `sa`, and `admin`; `root` authentication succeeds | MySQLAudit_CL |
+| 2026-09-12 17:17:39 onward | Multiple successful MySQL `root` logons observed from `45.128.199.82` | MySQLAudit_CL |
+| 2026-09-12 ~17:17–17:18 | `RECOVER_YOUR_DATA` database/table repeatedly accessed or created | MySQLAudit_CL |
+| 2026-09-13 00:47 | `213.209.159.115` again probes database accounts and successfully authenticates as `root` | MySQLAudit_CL |
+| 2026-09-13 22:20:48 | Post-breach MDE investigation package collected for forensic comparison | MDE Investigation Package |
+| 2026-09-13 22:49 | Compromised system isolated | Microsoft Defender for Endpoint |
 
 ---
 
@@ -844,55 +841,6 @@ Device Process Events.csv
 Device Registry Events.csv
 MySQLAudit_CL - Auth Logs.csv
 MySQLAudit_CL - Queries.csv
-```
-
----
-# 📸 Additional Screenshots
-
-## Microsoft Sentinel Incident
-
-```markdown
-![Microsoft Sentinel Incident](images/sentinel-incident.png)
-```
-
----
-
-## Microsoft Defender Investigation
-
-```markdown
-![Microsoft Defender Investigation](images/defender-investigation.png)
-```
-
----
-
-## MySQL Authentication Activity
-
-```markdown
-![MySQL Authentication Activity](images/mysql-authentication.png)
-```
-
----
-
-## KQL Threat Hunting
-
-```markdown
-![KQL Threat Hunting](images/kql-investigation.png)
-```
-
----
-
-## Process Investigation
-
-```markdown
-![Process Investigation](images/process-investigation.png)
-```
-
----
-
-## Network Analysis
-
-```markdown
-![Network Analysis](images/network-analysis.png)
 ```
 
 ---
