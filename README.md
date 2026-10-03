@@ -801,9 +801,8 @@ This project strengthened my practical cybersecurity experience in the following
 
 ## Executive Summary
 
-```markdown
-[View Executive Summary](reports/executive-summary.pdf)
-```
+[View Executive Summary](https://drive.google.com/file/d/1bVhzH3h-WZrC5PYOLzCePxchPgZQCQiF/view?usp=sharing)
+
 
 ---
 
