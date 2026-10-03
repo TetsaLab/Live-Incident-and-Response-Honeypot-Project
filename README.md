@@ -635,7 +635,9 @@ Device isolation prevented the compromised host from continuing to communicate w
 ![Defender Device Isolation](images/device-isolation.png)
 ```
 
-<!-- Add Defender isolation screenshot -->
+
+<img width="439" height="297" alt="image" src="https://github.com/user-attachments/assets/d9c8a171-347c-4cc0-aa1a-bc01339e9240" />
+
 
 ---
 
