@@ -106,14 +106,6 @@ Microsoft Sentinel was used for detection, alerting, threat hunting, and inciden
 
 ## 📷 Architecture Diagram
 
-> Add your architecture diagram below.
-
-```markdown
-![Honeypot Architecture](images/honeypot-architecture.png)
-```
-
-### Image Placeholder
-
 <img width="464" height="310" alt="image" src="https://github.com/user-attachments/assets/26f870fb-a890-4d11-a9ce-319297e88ff5" />
 
 
