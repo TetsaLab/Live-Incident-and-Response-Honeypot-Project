@@ -161,8 +161,6 @@ The MySQL logs would later be forwarded into Azure Log Analytics.
 
 ## 📷 MySQL Environment
 
-```
-
 <img width="519" height="312" alt="image" src="https://github.com/user-attachments/assets/e3383e16-3edf-46b0-8070-171202d9ab77" />
 
 
