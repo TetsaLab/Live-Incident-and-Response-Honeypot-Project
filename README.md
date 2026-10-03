@@ -825,18 +825,6 @@ The KQL queries used during this project are available in the `queries` director
 
 [View Detection and Threat Hunting Queries](https://docs.google.com/document/d/1UdA2zDDj3_F2NDdtbVayiN5eR-e8gX5_C6jMbDi-izY/edit?usp=drive_link)
 
-
-Recommended files:
-
-```text
-windows-logon-detection.kql
-mysql-authentication.kql
-mysql-query-analysis.kql
-device-process-investigation.kql
-network-analysis.kql
-threat-hunting.kql
-```
-
 ---
 
 # 📜 Log Samples
@@ -847,14 +835,15 @@ Selected sanitized log samples can be included in the repository to demonstrate 
 [View Sanitized Log Samples](https://drive.google.com/drive/folders/11hd_EYlOB7Yf2e3S_5gkEe3--RMWzdBa?usp=sharing)
 
 
-Recommended samples:
+Log samples:
 
 ```text
-mysql-auth-sample.csv
-mysql-query-sample.csv
-device-logon-sample.csv
-device-process-sample.csv
-network-events-sample.csv
+Device File Events.csv
+Device Logon Events.csv
+Device Process Events.csv
+Device Registry Events.csv
+MySQLAudit_CL - Auth Logs.csv
+MySQLAudit_CL - Queries.csv
 ```
 
 ---
