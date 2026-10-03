@@ -796,9 +796,9 @@ This project strengthened my practical cybersecurity experience in the following
 
 ## Incident Response Report
 
-```markdown
-[View Incident Response Report](reports/incident-response-report.pdf)
-```
+
+[View Incident Response Report](https://drive.google.com/file/d/1i-YH5lOHU7YbpFfJwbRZOTFDShWdbpQK/view?usp=sharing)
+
 
 ---
 
@@ -812,9 +812,9 @@ This project strengthened my practical cybersecurity experience in the following
 
 ## Forensic Investigation
 
-```markdown
-[View Forensic Analysis](reports/forensic-analysis.pdf)
-```
+
+[View Forensic Comparative Analysis](https://drive.google.com/file/d/17YwvJdY3cnl6ut7n9Q07Q5L5m66Xyu-O/view?usp=sharing)
+
 
 ---
 
@@ -822,9 +822,9 @@ This project strengthened my practical cybersecurity experience in the following
 
 The KQL queries used during this project are available in the `queries` directory.
 
-```markdown
-[View Detection and Threat Hunting Queries](queries/)
-```
+
+[View Detection and Threat Hunting Queries](https://docs.google.com/document/d/1UdA2zDDj3_F2NDdtbVayiN5eR-e8gX5_C6jMbDi-izY/edit?usp=drive_link)
+
 
 Recommended files:
 
@@ -843,9 +843,9 @@ threat-hunting.kql
 
 Selected sanitized log samples can be included in the repository to demonstrate how the investigation was performed.
 
-```markdown
-[View Sanitized Log Samples](logs/)
-```
+
+[View Sanitized Log Samples](https://drive.google.com/drive/folders/11hd_EYlOB7Yf2e3S_5gkEe3--RMWzdBa?usp=sharing)
+
 
 Recommended samples:
 
@@ -1101,4 +1101,3 @@ Focus: Incident Response, SIEM, Threat Hunting, DFIR
 
 ---
 
-> **Note:** Screenshots, reports, KQL queries, and sanitized log samples will be added to this repository as supporting evidence of the investigation.
