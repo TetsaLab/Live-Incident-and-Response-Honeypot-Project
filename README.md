@@ -161,11 +161,10 @@ The MySQL logs would later be forwarded into Azure Log Analytics.
 
 ## 📷 MySQL Environment
 
-```markdown
-![MySQL Database](images/mysql-database.png)
 ```
 
-<!-- Add MySQL Workbench / database screenshot here -->
+<img width="519" height="312" alt="image" src="https://github.com/user-attachments/assets/e3383e16-3edf-46b0-8070-171202d9ab77" />
+
 
 ---
 
