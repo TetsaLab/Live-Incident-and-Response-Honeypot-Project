@@ -207,10 +207,6 @@ MySQLAudit_CL
 
 ## 📷 Log Ingestion
 
-```markdown
-![MySQL Log Ingestion](images/log-ingestion.png)
-```
-
 <img width="877" height="353" alt="image" src="https://github.com/user-attachments/assets/1c14a279-8b4b-424f-8752-4bb522e3c1fd" />
 
 
@@ -275,12 +271,8 @@ This rule was designed to identify successful authentication to accounts that wo
 
 ## 📷 Sentinel Windows Authentication Rule
 
-```markdown
-![Sentinel Windows Logon Detection](images/windows-logon-detection.png)
-```
+<img width="644" height="353" alt="image" src="https://github.com/user-attachments/assets/ef8516f9-9f3b-4367-9e91-ad37c6f58900" />
 
-
-<img width="946" height="398" alt="image" src="https://github.com/user-attachments/assets/d1d2435a-bfa8-430c-8d93-f1dd538a683b" />
 
 
 ---
@@ -355,10 +347,6 @@ MySQLAudit_CL
 ---
 
 ## 📷 MySQL Authentication Detection
-
-```markdown
-![MySQL Authentication Detection](images/mysql-auth-detection.png)
-```
 
 
 <img width="674" height="302" alt="image" src="https://github.com/user-attachments/assets/04435f34-6de7-4e11-8825-e5588f3a203c" />
@@ -452,11 +440,6 @@ DeviceLogonEvents
 
 ## 📷 Security Alert
 
-```markdown
-![Security Alert](images/security-alert.png)
-```
-
-
 <img width="679" height="297" alt="image" src="https://github.com/user-attachments/assets/198ddbca-c365-4aef-8525-de54017ac419" />
 
 
@@ -509,10 +492,6 @@ This provided visibility into SQL commands executed by unauthorized users.
 ---
 
 ## 📷 Database Activity
-
-```markdown
-![MySQL Attacker Queries](images/mysql-attacker-queries.png)
-```
 
 <img width="680" height="301" alt="image" src="https://github.com/user-attachments/assets/13a90691-6826-4b49-8722-3fa6d52805ea" />
 
@@ -567,11 +546,6 @@ The lab environment restricted outbound activity so that attempted attacker comm
 
 ## 📷 Network Investigation
 
-```markdown
-![Network Investigation](images/network-investigation.png)
-```
-
-
 <img width="658" height="288" alt="image" src="https://github.com/user-attachments/assets/66642730-cb9f-4fbe-af01-9bb24cc28da1" />
 
 
@@ -619,11 +593,6 @@ Device isolation prevented the compromised host from continuing to communicate w
 ---
 
 ## 📷 Device Isolation
-
-```markdown
-![Defender Device Isolation](images/device-isolation.png)
-```
-
 
 <img width="439" height="297" alt="image" src="https://github.com/user-attachments/assets/d9c8a171-347c-4cc0-aa1a-bc01339e9240" />
 
