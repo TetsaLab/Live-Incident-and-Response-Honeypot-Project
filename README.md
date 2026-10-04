@@ -957,30 +957,29 @@ Investigation, eradication, recovery, validation, and documentation were equally
 
 ---
 
-# 🎯 Key Takeaway
+## 🎯 Key Takeaway
 
-This project allowed me to experience the complete cybersecurity incident response lifecycle instead of only analyzing pre-generated logs.
+This project provided hands-on experience with the complete cybersecurity incident response lifecycle rather than limiting the investigation to pre-generated logs.
 
 I:
 
-- Built the cloud environment
-- Configured endpoint monitoring
-- Ingested custom application logs
-- Developed detection rules
-- Established a clean baseline
+- Built and configured the cloud environment
+- Configured endpoint monitoring and security telemetry
+- Ingested custom application and database logs
+- Developed detection and analytic rules
+- Established a clean forensic baseline
 - Exposed the honeypot to real internet traffic
 - Detected malicious authentication activity
-- Investigated endpoint activity
-- Investigated database activity
-- Performed KQL threat hunting
+- Investigated endpoint and database activity
+- Performed KQL-based threat hunting
 - Correlated multiple security data sources
 - Reconstructed the incident timeline
 - Contained the compromised system
-- Compared pre-breach and post-breach artifacts
+- Compared pre-compromise and post-compromise artifacts
 - Developed an eradication and recovery strategy
-- Produced an incident response report
+- Produced a complete incident response report
 
-The project helped bridge the gap between cybersecurity theory and practical security operations.
+This project helped bridge the gap between cybersecurity theory and practical security operations by requiring me to build, monitor, detect, investigate, contain, and document a real-world attack scenario from beginning to end.
 
 ---
 
