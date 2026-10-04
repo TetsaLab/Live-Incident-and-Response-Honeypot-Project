@@ -915,35 +915,45 @@ MySQLAudit_CL - Queries.csv
 
 ---
 
-# 💡 Lessons Learned
+## 💡 Lessons Learned
 
-This project reinforced several important cybersecurity concepts.
+This project reinforced several important cybersecurity and incident response concepts.
 
-### Detection Before Exposure
+### Detection Should Be Established Before Exposure
 
-Security telemetry and detections should be established before systems are exposed to risk.
+Security telemetry, logging, and detections should be configured before systems are exposed to potential threats.
 
-Creating detections before exposure provided a known baseline and ensured malicious activity could be detected immediately.
+Establishing detection capabilities in advance provided a known baseline and ensured that malicious activity could be identified and investigated as soon as it occurred.
 
 ### Centralized Logging Is Critical
 
-Endpoint, database, and network telemetry provided different pieces of the incident.
+Endpoint, database, authentication, and network telemetry each provided different pieces of the investigation.
 
-Correlating multiple data sources made it possible to reconstruct a much more complete picture of attacker activity.
+Correlating multiple data sources made it possible to reconstruct a much more complete picture of attacker activity than any single log source could provide.
 
 ### Raw Logs Require Investigation
 
-Security logs rarely provide a complete answer by themselves.
+Security logs rarely provide a complete answer on their own.
 
-KQL parsing and correlation were required to transform raw events into meaningful incident evidence.
+KQL parsing, filtering, and correlation were necessary to transform raw events into meaningful evidence and reconstruct the sequence of attacker activity.
 
 ### Baselines Improve Forensic Analysis
 
-Collecting information before the breach made it possible to compare the system before and after compromise.
+Collecting system information before exposure made it possible to compare the environment before and after compromise.
+
+This comparison helped identify changes that occurred during the incident and distinguish normal system activity from potentially malicious behavior.
+
+### Internet Exposure Creates Immediate Risk
+
+Exposing services directly to the internet significantly increases the attack surface.
+
+The honeypot demonstrated how quickly an internet-accessible system can attract scanning, authentication attempts, and malicious activity. In a production environment, unnecessary exposure should be minimized through network segmentation, firewall restrictions, secure authentication, and least-privilege access.
 
 ### Containment Is Only One Part of Incident Response
 
-Isolating the compromised system stopped additional activity, but investigation, eradication, recovery, and reporting were equally important.
+Isolating the compromised system stopped additional attacker activity, but containment alone did not complete the response.
+
+Investigation, eradication, recovery, validation, and documentation were equally important for understanding what occurred and ensuring the system could be returned to a trusted state.
 
 ---
 
