@@ -133,11 +133,8 @@ The VM was then onboarded into Microsoft Defender for Endpoint so that endpoint 
 
 ## 📷 Azure VM
 
-```markdown
-![Azure Virtual Machine](images/azure-vm.png)
-```
+<img width="755" height="350" alt="image" src="https://github.com/user-attachments/assets/93e45064-3a8c-4a66-b7f4-8beebc35a923" />
 
-<!-- Add Azure VM screenshot here -->
 
 ---
 
@@ -390,11 +387,8 @@ This timestamp established the beginning of the incident investigation window.
 
 ## 📷 Exposure Configuration
 
-```markdown
-![Honeypot Exposure](images/honeypot-exposure.png)
-```
+<img width="730" height="302" alt="image" src="https://github.com/user-attachments/assets/0c20e501-1e81-4a2b-add7-1c7e20a37cb4" />
 
-<!-- Add NSG / firewall / exposure screenshot -->
 
 ---
 
