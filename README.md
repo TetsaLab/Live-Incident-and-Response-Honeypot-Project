@@ -1017,15 +1017,6 @@ Cybersecurity | Security Operations | Incident Response | Threat Detection
 - Cloud Security
 - Governance, Risk, and Compliance
 
----
-
-# 🔗 Connect
-
-**LinkedIn:**  
-`https://www.linkedin.com/in/YOUR-PROFILE`
-
-**GitHub:**  
-`https://github.com/TetsaLab`
 
 ---
 
