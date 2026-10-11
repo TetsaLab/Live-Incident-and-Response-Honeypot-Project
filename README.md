@@ -995,39 +995,21 @@ The techniques demonstrated in this repository are intended strictly for cyberse
 
 ---
 
-# 👤 Author
+## ⭐ Project Status
 
-**Sammy Tetzba**
-
-Cybersecurity | Security Operations | Incident Response | Threat Detection
-
-### Certifications
-
-- CompTIA Security+
-- Microsoft Azure Fundamentals (AZ-900)
-
-### Areas of Interest
-
-- Security Operations
-- Incident Response
-- Threat Hunting
-- Detection Engineering
-- Microsoft Sentinel
-- Microsoft Defender
-- Cloud Security
-- Governance, Risk, and Compliance
-
+**Status:** Completed  
+**Environment:** Microsoft Azure  
+**Project Type:** Cybersecurity Home Lab / Cyber Range  
+**Focus:** Incident Response | SIEM | Threat Hunting | Digital Forensics
 
 ---
 
-# ⭐ Project Status
+## 👤 Author
 
-```text
-Status: Completed
-Environment: Microsoft Azure
-Project Type: Cybersecurity Home Lab / Cyber Range
-Focus: Incident Response, SIEM, Threat Hunting, DFIR
-```
+**Sammy Tetzba**  
+CompTIA Security+ | Microsoft Azure Fundamentals (AZ-900)
 
----
+*Cybersecurity | Security Operations | Incident Response | Threat Detection*
+
+🔗 [GitHub Portfolio](https://github.com/TetsaLab)
 
