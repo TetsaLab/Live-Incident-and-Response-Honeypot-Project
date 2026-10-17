@@ -211,7 +211,24 @@ MySQLAudit_CL
 
 ### 📊 Security Telemetry
 
-The investigation used telemetry from several Microsoft Defender and Azure data sources.
+### Investigation Platform — Microsoft Defender XDR Advanced Hunting
+
+Microsoft Defender XDR Advanced Hunting served as
+the primary investigation interface for this project.
+
+I used Kusto Query Language (KQL) to investigate
+endpoint authentication, process execution,
+file changes, registry activity, and network events.
+
+Custom MySQL logs were collected through Azure
+Monitor and ingested into the Log Analytics
+workspace. These records were also analyzed
+through Advanced Hunting using the connected
+Microsoft Sentinel workspace.
+
+This enabled investigation across endpoint,
+database, and network telemetry from a
+centralized hunting interface.
 
 ### Primary Log Sources
 
