@@ -357,7 +357,6 @@ MySQLAudit_CL
     RawData
 | order by TimeGenerated desc
 ```
-
 ---
 
 ### 📷 MySQL Authentication Detection
@@ -365,6 +364,13 @@ MySQLAudit_CL
 
 <img width="674" height="302" alt="image" src="https://github.com/user-attachments/assets/04435f34-6de7-4e11-8825-e5588f3a203c" />
 
+**Authentication Investigation Results**
+
+The Microsoft Defender XDR Advanced Hunting query returned MySQL authentication records showing repeated attempts against privileged and administrative accounts.
+
+The results included failed authentication attempts against `root`, `sa`, and `admin`, alongside a `root` connection classified as successful from external IP address `213.209.159.115`.
+
+Authentication findings were investigated alongside MySQL query activity to identify unauthorized database access and distinguish failed connection attempts from sessions associated with database operations.
 
 ---
 
