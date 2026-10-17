@@ -550,7 +550,7 @@ The lab environment restricted outbound activity so that attempted attacker comm
 | Time (UTC) | Event | Source |
 |---|---|---|
 | 2026-09-12 02:16 | Honeypot exposed to the public internet | Lab Notes |
-| 2026-09-12 02:35:57 | Pre-breach MDE investigation package collected to establish forensic baseline | MDE Investigation Package |
+| 2026-09-12 02:35:57 | Initial MDE investigation package collected after exposure, but before the first confirmed malicious activity, for later forensic comparison | MDE Investigation Package |
 | 2026-09-12 02:57:40 | Remote MySQL `root` authentication activity begins from `64.89.163.93`; failures and successful logons observed | MySQLAudit_CL |
 | 2026-09-12 ~02:58 | Database enumeration and data-access activity begins | MySQLAudit_CL |
 | 2026-09-12 02:58:03 | `credentials`, `customers`, `orders`, and `payments` tables dropped | MySQLAudit_CL |
