@@ -17,23 +17,23 @@ Build
    ↓
 Instrument
    ↓
-Baseline
+Establish Baseline
    ↓
-Detect
+Configure Detections
    ↓
-Expose
+Expose Honeypot
+   ↓
+Detect Malicious Activity
    ↓
 Investigate
    ↓
 Contain
    ↓
-Eradicate
-   ↓
-Recover
+Plan Eradication & Recovery
    ↓
 Report
 ```
-
+ 
 The lab provided hands-on experience with:
 
 - Microsoft Azure
@@ -937,8 +937,8 @@ MySQLAudit_CL - Queries.csv
              │
              ▼
 ┌─────────────────────────┐
-│ Plan Eradication &      |
-| Recovery                │
+│ Plan Eradication &      │
+│ Recovery                │
 └────────────┬────────────┘
              │
              ▼
