@@ -56,7 +56,7 @@ The lab provided hands-on experience with:
 
 ---
 
-### 🎯 Project Objectives
+## 🎯 Project Objectives
 
 The main goals of this project were to:
 
@@ -78,7 +78,7 @@ The main goals of this project were to:
 
 ---
 
-### 🏗️ Lab Architecture
+## 🏗️ Lab Architecture
 
 The environment consisted of a Windows virtual machine hosted in Microsoft Azure with a MySQL database installed locally.
 
@@ -209,7 +209,7 @@ MySQLAudit_CL
 
 ---
 
-### 📊 Security Telemetry
+## 📊 Security Telemetry
 
 ### Investigation Platform — Microsoft Defender XDR Advanced Hunting
 
@@ -562,7 +562,7 @@ The lab environment restricted outbound activity so that attempted attacker comm
 
 ---
 
-### 🕒 Incident Timeline
+## 🕒 Incident Timeline
 
 | Time (UTC) | Event | Source |
 |---|---|---|
@@ -675,7 +675,7 @@ The recovery plan included:
 
 ---
 
-### 📊 Key Findings
+## 📊 Key Findings
 
 ### 1. Confirmed Unauthorized MySQL Root Access
 
@@ -732,7 +732,7 @@ DROP DATABASE world
 ```
 
 
-### 🧠 Skills Developed
+## 🧠 Skills Developed
 
 This project strengthened my practical cybersecurity experience in the following areas:
 
@@ -791,7 +791,7 @@ This project strengthened my practical cybersecurity experience in the following
 
 ---
 
-### 🧰 Technologies Used
+## 🧰 Technologies Used
 
 | Technology | Usage |
 |---|---|
@@ -809,7 +809,7 @@ This project strengthened my practical cybersecurity experience in the following
 
 ---
 
-### 📂 Project Artifacts
+## 📂 Project Artifacts
 
 ### Incident Response Report
 
@@ -834,7 +834,7 @@ This project strengthened my practical cybersecurity experience in the following
 
 ---
 
-# 🔎 KQL Queries
+## 🔎 KQL Queries
 
 The KQL queries developed during this project are
 documented in the linked query collection.
@@ -850,7 +850,7 @@ and Azure security telemetry.
 
 ---
 
-### 📜 Log Samples
+## 📜 Log Samples
 
 Selected sanitized log samples can be included in the repository to demonstrate how the investigation was performed.
 
@@ -871,7 +871,7 @@ MySQLAudit_CL - Queries.csv
 
 ---
 
-### 📈 Project Workflow
+## 📈 Project Workflow
 
 ```text
 ┌─────────────────────────┐
@@ -973,9 +973,16 @@ KQL parsing, filtering, and correlation were necessary to transform raw events i
 
 ### Baselines Improve Forensic Analysis
 
-Collecting system information before exposure made it possible to compare the environment before and after compromise.
+Establishing a known-good security baseline before
+exposure and collecting an initial MDE investigation
+package before confirmed malicious activity provided
+valuable reference points for forensic analysis.
 
-This comparison helped identify changes that occurred during the incident and distinguish normal system activity from potentially malicious behavior.
+Comparing the initial investigation package with
+post-compromise artifacts helped identify changes
+that occurred during the incident and distinguish
+normal system activity from potentially malicious
+behavior.
 
 ### Internet Exposure Creates Immediate Risk
 
