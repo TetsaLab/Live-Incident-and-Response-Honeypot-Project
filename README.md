@@ -364,6 +364,7 @@ MySQLAudit_CL
 
 <img width="674" height="302" alt="image" src="https://github.com/user-attachments/assets/04435f34-6de7-4e11-8825-e5588f3a203c" />
 
+
 **Authentication Investigation Results**
 
 The Microsoft Defender XDR Advanced Hunting query returned MySQL authentication records showing repeated attempts against privileged and administrative accounts.
