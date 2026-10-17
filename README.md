@@ -56,7 +56,7 @@ The lab provided hands-on experience with:
 
 ---
 
-# 🎯 Project Objectives
+### 🎯 Project Objectives
 
 The main goals of this project were to:
 
@@ -78,7 +78,7 @@ The main goals of this project were to:
 
 ---
 
-# 🏗️ Lab Architecture
+### 🏗️ Lab Architecture
 
 The environment consisted of a Windows virtual machine hosted in Microsoft Azure with a MySQL database installed locally.
 
@@ -86,7 +86,7 @@ Microsoft Defender for Endpoint provided endpoint telemetry, while MySQL audit l
 
 Microsoft Sentinel was used for detection, alerting, threat hunting, and incident investigation.
 
-## Core Components
+### Core Components
 
 | Component | Purpose |
 |---|---|
@@ -104,14 +104,14 @@ Microsoft Sentinel was used for detection, alerting, threat hunting, and inciden
 
 ---
 
-## 📷 Architecture Diagram
+### 📷 Architecture Diagram
 
 <img width="464" height="310" alt="image" src="https://github.com/user-attachments/assets/26f870fb-a890-4d11-a9ce-319297e88ff5" />
 
 
 ---
 
-# 🔐 Phase 1 — Build and Harden the Honeypot
+## 🔐 Phase 1 — Build and Harden the Honeypot
 
 The environment was initially created in a secured state.
 
@@ -119,7 +119,7 @@ A Windows virtual machine was deployed in Microsoft Azure with a public IP addre
 
 The VM was then onboarded into Microsoft Defender for Endpoint so that endpoint telemetry could be collected and analyzed.
 
-## Initial Configuration
+### Initial Configuration
 
 - Windows virtual machine deployed in Azure
 - Public IP address configured
@@ -131,14 +131,14 @@ The VM was then onboarded into Microsoft Defender for Endpoint so that endpoint 
 
 ---
 
-## 📷 Azure VM
+### 📷 Azure VM
 
 <img width="755" height="350" alt="image" src="https://github.com/user-attachments/assets/93e45064-3a8c-4a66-b7f4-8beebc35a923" />
 
 
 ---
 
-# 🗄️ Phase 2 — Install and Configure MySQL
+## 🗄️ Phase 2 — Install and Configure MySQL
 
 MySQL Server was installed on the honeypot to simulate a business-critical database system.
 
@@ -146,7 +146,7 @@ A dummy corporate database was imported so that any attacker interaction with th
 
 MySQL general logging was enabled to record authentication events, connections, and SQL queries.
 
-## MySQL Log Location
+### MySQL Log Location
 
 ```text
 C:\ProgramData\MySQL\MySQL Server 8.0\Data\mysql_general.log
@@ -156,14 +156,14 @@ The MySQL logs would later be forwarded into Azure Log Analytics.
 
 ---
 
-## 📷 MySQL Environment
+### 📷 MySQL Environment
 
 <img width="519" height="312" alt="image" src="https://github.com/user-attachments/assets/e3383e16-3edf-46b0-8070-171202d9ab77" />
 
 
 ---
 
-# 📡 Phase 3 — Configure Log Collection
+## 📡 Phase 3 — Configure Log Collection
 
 The next stage was to centralize security telemetry within the Azure Log Analytics Workspace.
 
@@ -175,7 +175,7 @@ The logs were ingested into the custom Log Analytics table:
 MySQLAudit_CL
 ```
 
-## MySQL Log Collection Configuration
+### MySQL Log Collection Configuration
 
 ```text
 Log File:
@@ -192,7 +192,7 @@ Once the Data Collection Rule was deployed, I verified that MySQL authentication
 
 ---
 
-## Example Verification Query
+### Example Verification Query
 
 ```kql
 MySQLAudit_CL
@@ -202,18 +202,18 @@ MySQLAudit_CL
 
 ---
 
-## 📷 Log Ingestion
+### 📷 Log Ingestion
 
 <img width="877" height="353" alt="image" src="https://github.com/user-attachments/assets/1c14a279-8b4b-424f-8752-4bb522e3c1fd" />
 
 
 ---
 
-# 📊 Security Telemetry
+### 📊 Security Telemetry
 
 The investigation used telemetry from several Microsoft Defender and Azure data sources.
 
-## Primary Log Sources
+### Primary Log Sources
 
 ```text
 DeviceLogonEvents
@@ -229,7 +229,7 @@ These tables provided visibility into authentication, process execution, file ac
 
 ---
 
-# 🛡️ Phase 4 — Detection Engineering
+## 🛡️ Phase 4 — Detection Engineering
 
 Before exposing the honeypot to the internet, Microsoft Sentinel analytics rules were created.
 
@@ -239,12 +239,12 @@ The goal was to ensure that detection capabilities were already operational befo
 
 ---
 
-# 🔎 Detection 1 — Successful Windows Logon
+### 🔎 Detection 1 — Successful Windows Logon
 
 A Microsoft Sentinel analytics rule was created to identify successful authentication to the exposed Windows system.
 
 
-## Example KQL
+### Example KQL
 
 ```kql
 let MyDevice = "<DEVICE-NAME>";
@@ -266,7 +266,7 @@ This rule was designed to identify successful authentication to accounts that wo
 
 ---
 
-## 📷 Sentinel Windows Authentication Rule
+### 📷 Sentinel Windows Authentication Rule
 
 <img width="644" height="353" alt="image" src="https://github.com/user-attachments/assets/ef8516f9-9f3b-4367-9e91-ad37c6f58900" />
 
@@ -274,7 +274,7 @@ This rule was designed to identify successful authentication to accounts that wo
 
 ---
 
-# 🔎 Detection 2 — Successful MySQL Authentication
+### 🔎 Detection 2 — Successful MySQL Authentication
 
 MySQL logs were ingested into Log Analytics as raw text.
 
@@ -292,7 +292,7 @@ The query identified:
 
 ---
 
-## Example MySQL Authentication Investigation
+### Example MySQL Authentication Investigation
 
 ```kql
 let MyDevice = "<DEVICE-NAME>";
@@ -343,7 +343,7 @@ MySQLAudit_CL
 
 ---
 
-## 📷 MySQL Authentication Detection
+### 📷 MySQL Authentication Detection
 
 
 <img width="674" height="302" alt="image" src="https://github.com/user-attachments/assets/04435f34-6de7-4e11-8825-e5588f3a203c" />
@@ -351,7 +351,7 @@ MySQLAudit_CL
 
 ---
 
-# 🧪 Phase 5 — Establish a Clean Baseline
+## 🧪 Phase 5 — Establish a Clean Baseline
 
 Before deliberately exposing the honeypot, I verified that:
 
@@ -365,7 +365,7 @@ This provided a reference point that could later be compared with post-compromis
 
 ---
 
-# ⚠️ Phase 6 — Deliberate Exposure
+## ⚠️ Phase 6 — Deliberate Exposure
 
 Once logging and detections were confirmed, the honeypot was deliberately weakened and exposed to the public internet.
 
@@ -375,7 +375,7 @@ The exposure process included intentionally weakening selected security controls
 
 > **Important:** These actions were performed only inside an isolated training environment containing simulated data.
 
-## Exposure Timestamp
+### Exposure Timestamp
 
 ```text
 2026-09-12T02:16:00.2844301Z
@@ -385,14 +385,14 @@ This timestamp established the beginning of the incident investigation window.
 
 ---
 
-## 📷 Exposure Configuration
+### 📷 Exposure Configuration
 
 <img width="730" height="302" alt="image" src="https://github.com/user-attachments/assets/0c20e501-1e81-4a2b-add7-1c7e20a37cb4" />
 
 
 ---
 
-# 🚨 Phase 7 — Detect the Breach
+## 🚨 Phase 7 — Detect the Breach
 
 Once exposed, the system was monitored for attacker activity.
 
@@ -410,7 +410,7 @@ Microsoft Sentinel analytics rules and Defender telemetry were used to identify:
 
 ---
 
-## Windows Authentication Hunting
+### Windows Authentication Hunting
 
 ```kql
 let MyDevice = "<DEVICE-NAME>";
@@ -432,14 +432,14 @@ DeviceLogonEvents
 
 ---
 
-## 📷 Security Alert
+### 📷 Security Alert
 
 <img width="679" height="297" alt="image" src="https://github.com/user-attachments/assets/198ddbca-c365-4aef-8525-de54017ac419" />
 
 
 ---
 
-# 🔍 Phase 8 — Threat Hunting and Investigation
+## 🔍 Phase 8 — Threat Hunting and Investigation
 
 Once suspicious activity was identified, I began reconstructing what occurred inside the environment.
 
@@ -459,11 +459,11 @@ The investigation focused on determining:
 
 ---
 
-# 🔎 MySQL Query Investigation
+### 🔎 MySQL Query Investigation
 
 Database activity was investigated using the `MySQLAudit_CL` table.
 
-## KQL Query
+### KQL Query
 
 ```kql
 MySQLAudit_CL
@@ -485,18 +485,18 @@ This provided visibility into SQL commands executed by unauthorized users.
 
 ---
 
-## 📷 Database Activity
+### 📷 Database Activity
 
 <img width="680" height="301" alt="image" src="https://github.com/user-attachments/assets/13a90691-6826-4b49-8722-3fa6d52805ea" />
 
 
 ---
 
-# 🖥️ Endpoint Investigation
+### 🖥️ Endpoint Investigation
 
 Microsoft Defender for Endpoint telemetry was used to investigate system activity.
 
-## Defender Tables Used
+### Defender Tables Used
 
 ```text
 DeviceLogonEvents
@@ -510,11 +510,11 @@ These data sources were correlated to reconstruct the actions performed on the c
 
 ---
 
-# 🌐 Network Investigation
+### 🌐 Network Investigation
 
 Network telemetry was also analyzed to identify inbound and outbound communication involving the honeypot.
 
-## Example Query
+### Example Query
 
 ```kql
 let MyDevice = "<DEVICE-NAME>";
@@ -538,14 +538,14 @@ The lab environment restricted outbound activity so that attempted attacker comm
 
 ---
 
-## 📷 Network Investigation
+### 📷 Network Investigation
 
 <img width="658" height="288" alt="image" src="https://github.com/user-attachments/assets/66642730-cb9f-4fbe-af01-9bb24cc28da1" />
 
 
 ---
 
-# 🕒 Incident Timeline
+### 🕒 Incident Timeline
 
 | Time (UTC) | Event | Source |
 |---|---|---|
@@ -569,11 +569,11 @@ The lab environment restricted outbound activity so that attempted attacker comm
 
 ---
 
-# 🚧 Phase 9 — Containment
+## 🚧 Phase 9 — Containment
 
 After sufficient evidence had been collected, the compromised virtual machine was isolated using Microsoft Defender for Endpoint.
 
-## Isolation Timestamp
+### Isolation Timestamp
 
 ```text
 2026-09-13T22:49:24.8563108Z
@@ -583,20 +583,20 @@ Device isolation prevented the compromised host from continuing to communicate w
 
 ---
 
-## 📷 Device Isolation
+### 📷 Device Isolation
 
 <img width="439" height="297" alt="image" src="https://github.com/user-attachments/assets/d9c8a171-347c-4cc0-aa1a-bc01339e9240" />
 
 
 ---
 
-# 🧬 Forensic Investigation
+### 🧬 Forensic Investigation
 
 Microsoft Defender investigation packages were collected before and after the breach.
 
 The two packages were compared to identify changes introduced during the compromise.
 
-## Areas Compared
+### Areas Compared
 
 - Running processes
 - Loaded modules
@@ -617,13 +617,13 @@ The two packages were compared to identify changes introduced during the comprom
 
 ---
 
-## 📷 Pre-Breach vs Post-Breach Comparison
+### 📷 Pre-Breach vs Post-Breach Comparison
 
 [DFIR Comparative Analysis](https://docs.google.com/document/d/1Bv684BmwiGMRnIj5lrVv0wV5Pr2c9isX/edit?usp=sharing&ouid=103047111509812865481&rtpof=true&sd=true)
 
 ---
 
-# 🧹 Phase 10 — Eradication and Recovery Strategy
+## 🧹 Phase 10 — Eradication and Recovery Strategy
 
 Following containment, I developed an eradication
 and recovery strategy for the compromised environment.
@@ -658,9 +658,9 @@ The recovery plan included:
 
 ---
 
-# 📊 Key Findings
+### 📊 Key Findings
 
-## 1. Confirmed Unauthorized MySQL Root Access
+### 1. Confirmed Unauthorized MySQL Root Access
 
 The investigation confirmed repeated remote authentication to the MySQL `root` account from external IP addresses.
 
@@ -675,7 +675,7 @@ This confirmed that the database was directly accessible from the public interne
 
 ---
 
-## 2. Database Enumeration and Data Access
+### 2. Database Enumeration and Data Access
 
 After gaining access to the MySQL server, the attacker began enumerating the database environment and accessing stored information.
 
@@ -697,7 +697,7 @@ Although database records were accessed, the available evidence did not confirm 
 
 ---
 
-## 3. Destructive SQL Activity
+### 3. Destructive SQL Activity
 
 The attacker executed multiple destructive SQL commands against the database environment.
 
@@ -715,11 +715,11 @@ DROP DATABASE world
 ```
 
 
-# 🧠 Skills Developed
+### 🧠 Skills Developed
 
 This project strengthened my practical cybersecurity experience in the following areas:
 
-## Security Operations
+### Security Operations
 
 - SIEM monitoring
 - Alert investigation
@@ -727,7 +727,7 @@ This project strengthened my practical cybersecurity experience in the following
 - Incident triage
 - Event correlation
 
-## Threat Hunting
+### Threat Hunting
 
 - KQL development
 - Authentication analysis
@@ -735,7 +735,7 @@ This project strengthened my practical cybersecurity experience in the following
 - Network investigation
 - Database auditing
 
-## Detection Engineering
+### Detection Engineering
 
 - Microsoft Sentinel analytics rules
 - Custom log parsing
@@ -743,7 +743,7 @@ This project strengthened my practical cybersecurity experience in the following
 - Entity mapping
 - Baseline validation
 
-## Incident Response
+### Incident Response
 
 - Detection
 - Analysis
@@ -752,7 +752,7 @@ This project strengthened my practical cybersecurity experience in the following
 - Recovery
 - Reporting
 
-## Digital Forensics
+### Digital Forensics
 
 - Pre-breach baseline comparison
 - Post-breach forensic analysis
@@ -762,7 +762,7 @@ This project strengthened my practical cybersecurity experience in the following
 - Registry investigation
 - Network connection analysis
 
-## Cloud Security
+### Cloud Security
 
 - Microsoft Azure
 - Azure Virtual Machines
@@ -774,7 +774,7 @@ This project strengthened my practical cybersecurity experience in the following
 
 ---
 
-# 🧰 Technologies Used
+### 🧰 Technologies Used
 
 | Technology | Usage |
 |---|---|
@@ -792,9 +792,9 @@ This project strengthened my practical cybersecurity experience in the following
 
 ---
 
-# 📂 Project Artifacts
+### 📂 Project Artifacts
 
-## Incident Response Report
+### Incident Response Report
 
 
 [View Incident Response Report](https://drive.google.com/file/d/1i-YH5lOHU7YbpFfJwbRZOTFDShWdbpQK/view?usp=sharing)
@@ -802,14 +802,14 @@ This project strengthened my practical cybersecurity experience in the following
 
 ---
 
-## Executive Summary
+### Executive Summary
 
 [View Executive Summary](https://drive.google.com/file/d/1bVhzH3h-WZrC5PYOLzCePxchPgZQCQiF/view?usp=sharing)
 
 
 ---
 
-## Forensic Investigation
+### Forensic Investigation
 
 
 [View Forensic Comparative Analysis](https://drive.google.com/file/d/17YwvJdY3cnl6ut7n9Q07Q5L5m66Xyu-O/view?usp=sharing)
@@ -833,7 +833,7 @@ and Azure security telemetry.
 
 ---
 
-# 📜 Log Samples
+### 📜 Log Samples
 
 Selected sanitized log samples can be included in the repository to demonstrate how the investigation was performed.
 
@@ -854,7 +854,7 @@ MySQLAudit_CL - Queries.csv
 
 ---
 
-# 📈 Project Workflow
+### 📈 Project Workflow
 
 ```text
 ┌─────────────────────────┐
@@ -1000,7 +1000,7 @@ This project helped bridge the gap between cybersecurity theory and practical se
 
 ---
 
-# ⚠️ Security Notice
+## ⚠️ Security Notice
 
 This project was conducted inside an isolated cybersecurity training environment using intentionally vulnerable systems and simulated corporate data.
 
