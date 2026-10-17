@@ -819,7 +819,14 @@ This project strengthened my practical cybersecurity experience in the following
 
 # 🔎 KQL Queries
 
-The KQL queries used during this project are available in the `queries` directory.
+The KQL queries developed during this project are
+documented in the linked query collection.
+
+These queries demonstrate detection engineering,
+authentication analysis, database investigation,
+and threat hunting across Microsoft Defender
+and Azure security telemetry.
+
 
 
 [View Detection and Threat Hunting Queries](https://docs.google.com/document/d/1UdA2zDDj3_F2NDdtbVayiN5eR-e8gX5_C6jMbDi-izY/edit?usp=drive_link)
@@ -913,7 +920,8 @@ MySQLAudit_CL - Queries.csv
              │
              ▼
 ┌─────────────────────────┐
-│ Eradicate & Recover     │
+│ Plan Eradication &      |
+| Recovery                │
 └────────────┬────────────┘
              │
              ▼
