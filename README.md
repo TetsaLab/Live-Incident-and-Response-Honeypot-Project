@@ -621,14 +621,23 @@ The two packages were compared to identify changes introduced during the comprom
 
 [DFIR Comparative Analysis](https://docs.google.com/document/d/1Bv684BmwiGMRnIj5lrVv0wV5Pr2c9isX/edit?usp=sharing&ouid=103047111509812865481&rtpof=true&sd=true)
 
-
 ---
 
-# 🧹 Phase 10 — Eradication and Recovery
+# 🧹 Phase 10 — Eradication and Recovery Strategy
 
-Because the honeypot was intentionally exposed and both the Windows system and MySQL database were treated as compromised, the safest recovery approach was to rebuild the system from a trusted state.
+Following containment, I developed an eradication
+and recovery strategy for the compromised environment.
 
-## Recovery Strategy
+Because the honeypot was intentionally exposed and
+both the Windows host and MySQL database were treated
+as compromised, rebuilding from a trusted state was
+identified as the safest recovery approach.
+
+The recovery strategy was documented as part of the
+incident response process. The lab demonstrated
+containment and recovery planning; a completed
+production-style restoration was not part of the
+documented scope.
 
 The recovery plan included:
 
